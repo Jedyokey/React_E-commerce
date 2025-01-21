@@ -6,7 +6,8 @@ import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory/ShopCategory';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
-import LoginSignUp from './pages/LoginSignUp';
+import LoginSignUp from './pages/LoginSignUp/LoginSignUp';
+import Login from './pages/Login/Login';
 import Footer from './components/Footer/Footer';
 import men_banner from "./components/assets/banner_mens.png"
 import women_banner from "./components/assets/banner_women.png"
@@ -26,7 +27,8 @@ function App() {
             <Route path=':productId' element={<Product />} />
           </Route>
           <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<LoginSignUp />} />
+          <Route path='/login_signup' element={<LoginSignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </Router>
