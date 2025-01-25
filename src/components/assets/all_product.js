@@ -43,6 +43,9 @@ let all_product = [
     image: p1_img,
     new_price: 50.0,
     old_price: 80.5,
+    tags: ["Modern", "Latest"],
+    categories: ["Women", "T-shirt", "Crop-top"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 2,
@@ -51,6 +54,9 @@ let all_product = [
     image: p2_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Modern", "Latest"],
+    categories: ["Women", "T-shirt", "Crop-top"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 3,
@@ -59,6 +65,9 @@ let all_product = [
     image: p3_img,
     new_price: 60.0,
     old_price: 100.5,
+    tags: ["Modern", "Latest"],
+    categories: ["Women", "T-shirt", "Crop-top"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 4,
@@ -67,6 +76,9 @@ let all_product = [
     image: p4_img,
     new_price: 100.0,
     old_price: 150.0,
+    tags: ["Modern", "Latest"],
+    categories: ["Women", "T-shirt", "Crop-top"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 5,
@@ -75,6 +87,9 @@ let all_product = [
     image: p5_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Modern", "Latest"],
+    categories: ["Women", "T-shirt", "Crop-top"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 6,
@@ -83,6 +98,9 @@ let all_product = [
     image: p6_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Modern", "Latest"],
+    categories: ["Women", "T-shirt", "Crop-top"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 7,
@@ -91,6 +109,9 @@ let all_product = [
     image: p7_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Trendy", "Summer"],
+    categories: ["Women", "Blouse", "Peplum"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 8,
@@ -99,6 +120,9 @@ let all_product = [
     image: p8_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Trendy", "Summer"],
+    categories: ["Women", "Blouse", "Peplum"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 9,
@@ -107,6 +131,9 @@ let all_product = [
     image: p9_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Trendy", "Summer"],
+    categories: ["Women", "Blouse", "Peplum"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 10,
@@ -115,6 +142,9 @@ let all_product = [
     image: p10_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Trendy", "Summer"],
+    categories: ["Women", "Blouse", "Peplum"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 11,
@@ -123,6 +153,9 @@ let all_product = [
     image: p11_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Trendy", "Summer"],
+    categories: ["Women", "Blouse", "Peplum"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 12,
@@ -131,6 +164,9 @@ let all_product = [
     image: p12_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Trendy", "Summer"],
+    categories: ["Women", "Blouse", "Peplum"],
+    description: "Empowering elegance and diversity with stunning dresses, blouses, skirts, and jumpsuits, the focus is on self-expression and confidence. Casualwear includes crop tops, leggings, and denim that balance style with comfort, while formal collections feature elegant gowns, tailored pantsuits, and blazers. The brand also offers a range of accessories, including bags, shoes, and jewelry, to complete your look.",
   },
   {
     id: 13,
@@ -139,6 +175,9 @@ let all_product = [
     image: p13_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 14,
@@ -147,6 +186,9 @@ let all_product = [
     image: p14_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 15,
@@ -155,6 +197,9 @@ let all_product = [
     image: p15_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 16,
@@ -163,6 +208,9 @@ let all_product = [
     image: p16_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 17,
@@ -171,6 +219,9 @@ let all_product = [
     image: p17_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 18,
@@ -179,6 +230,9 @@ let all_product = [
     image: p18_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 19,
@@ -187,6 +241,9 @@ let all_product = [
     image: p19_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 20,
@@ -195,6 +252,9 @@ let all_product = [
     image: p20_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 21,
@@ -203,6 +263,9 @@ let all_product = [
     image: p21_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 22,
@@ -211,6 +274,9 @@ let all_product = [
     image: p22_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 23,
@@ -219,6 +285,9 @@ let all_product = [
     image: p23_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 24,
@@ -227,6 +296,9 @@ let all_product = [
     image: p24_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Sophisticated", "High-Quality", "Tailored"],
+    categories: ["Men", "Bomber Jacket", "Casualwear"],
+    description: "From versatile t-shirts, polo shirts, and hoodies to sophisticated blazers, suits, and dress shirts, the collection caters to both casual and formal occasions. Brands like Calvin Klein and Ralph Lauren emphasize high-quality fabrics, tailored fits, and neutral color palettes, ensuring a polished look for every setting. Essentials like jeans, chinos, and sneakers provide the perfect balance of comfort and trendiness.",
   },
   {
     id: 25,
@@ -235,6 +307,9 @@ let all_product = [
     image: p25_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 26,
@@ -243,6 +318,9 @@ let all_product = [
     image: p26_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 27,
@@ -251,6 +329,9 @@ let all_product = [
     image: p27_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 28,
@@ -259,6 +340,9 @@ let all_product = [
     image: p28_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 29,
@@ -267,6 +351,9 @@ let all_product = [
     image: p29_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 30,
@@ -275,6 +362,9 @@ let all_product = [
     image: p30_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 31,
@@ -283,6 +373,9 @@ let all_product = [
     image: p31_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 32,
@@ -291,6 +384,9 @@ let all_product = [
     image: p32_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 33,
@@ -299,6 +395,9 @@ let all_product = [
     image: p33_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 34,
@@ -307,6 +406,9 @@ let all_product = [
     image: p34_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 35,
@@ -315,6 +417,9 @@ let all_product = [
     image: p35_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
   {
     id: 36,
@@ -323,6 +428,9 @@ let all_product = [
     image: p36_img,
     new_price: 85.0,
     old_price: 120.5,
+    tags: ["Playful", "Durable", "Adorable"],
+    categories: ["Kids", "Hooded Sweatshirt", "Graphic Tees"],
+    description: "Playful, Durable, and Adorable collections include vibrant graphic tees, shorts, and sweatpants for everyday adventures, alongside cute and stylish dresses, rompers, and jackets for special occasions. Popular brands like Carter's and Gap Kids focus on breathable fabrics, durability, and cheerful prints featuring favorite cartoons and animals. The clothing prioritizes comfort, allowing kids to play freely while looking effortlessly adorable.",
   },
 ];
 

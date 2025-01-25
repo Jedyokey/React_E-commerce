@@ -22,17 +22,18 @@ const ShopCategory = ({ banner, category }) => {
         </div>
 
         <div className="shopcategory-products">
-          {products.map((item, i) => (
-            category === item.category ? 
+        {products
+          .filter(item => item.category === category) // Filter products by category
+          .map(item => (
             <Item 
-              key={i} 
+              key={item.id} 
               id={item.id} 
               name={item.name} 
               image={item.image} 
               newPrice={item.new_price} 
               oldPrice={item.old_price} 
-            /> : null
-          ))}   
+            />
+          ))}
         </div>
 
         <div className="shopcategory-loadmore">

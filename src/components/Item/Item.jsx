@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Item.css"
 
-const Item = ({ name, image, newPrice, oldPrice }) => {
+const Item = ({ id, name, image, newPrice, oldPrice, }) => {
   return (
     <div className='item'>
-        <img src={image} alt="" />
+        <Link to={`/product/${id}`}>
+          <img src={image} alt="" />
+        </Link>
         <p>{name}</p>
 
         <div className="item-prices">
@@ -12,10 +15,9 @@ const Item = ({ name, image, newPrice, oldPrice }) => {
                 ${newPrice}
             </div>
             <div className="item-price-old">
-                ${oldPrice}
+                <s>${oldPrice}</s>
             </div>
         </div>
-      
     </div>
   )
 }
