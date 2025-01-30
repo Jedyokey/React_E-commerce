@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory/ShopCategory';
 import Product from './pages/Product/Product';
-import Cart from './pages/Cart';
+import Cart from './pages/Cart/Cart';
 import LoginSignUp from './pages/LoginSignUp/LoginSignUp';
 import Login from './pages/Login/Login';
 import Footer from './components/Footer/Footer';
@@ -14,12 +14,22 @@ import men_banner from "./components/assets/banner_mens.png"
 import women_banner from "./components/assets/banner_women.png"
 import kids_banner from "./components/assets/banner_kids.png"
 
+// Import Toastify
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <div>
       <Router>
         <ScrollToTop />
         <Navbar />
+        <ToastContainer 
+          position="top-right" 
+          autoClose={5000} 
+          pauseOnHover
+          theme="colored" 
+        />
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route path="/men" element={<ShopCategory banner={men_banner} category="men" />} />

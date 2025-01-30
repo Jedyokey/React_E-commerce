@@ -1,0 +1,28 @@
+.continue-shopping-button {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensures text and icon are centered */
+    gap: 8px; /* Adds some space between the icon and the text */
+  }
+  
+  .continue-shopping-button:hover {
+    background-color: #e73370;
+  }
+  
+  .continue-shopping-button img {
+    width: 15px; /* Adjusted for better sizing */
+    height: auto;
+    margin-right: 5px; /* Adds consistent spacing from the text */
+    display: block; /* Ensures proper positioning in flex container */
+  }
+  
