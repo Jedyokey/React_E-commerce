@@ -8,6 +8,7 @@ export const ShopContext = createContext(null);
 const ShopContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
         setProducts(all_product);
@@ -94,6 +95,14 @@ const ShopContextProvider = ({ children }) => {
         );
     };
 
+    // Search products
+    const searchProducts = (query) => {
+        const filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(query.toLowerCase())
+        );
+        setSearchResults(filteredProducts);
+    };
+
     // Total calculations
     const totalPrice = cart.reduce((total, item) => total + item.new_price * item.quantity, 0);
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -106,6 +115,8 @@ const ShopContextProvider = ({ children }) => {
         decreaseQuantity,
         totalPrice,
         cartCount,
+        searchProducts,
+        searchResults,
     };
 
     return <ShopContext.Provider value={contextValue}>
