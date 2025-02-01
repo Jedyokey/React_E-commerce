@@ -1,74 +1,240 @@
+/* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 16px;
-    box-shadow: 0 1px 3px -2px black;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
+/* Top Section */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
 .nav-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.nav-logo p {
-    color: #171717;
-    font-size: 32px;
-    font-weight: 500;
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    color: #626262;
-    font-size: 20px;
-    font-weight: 500;
+
+.nav-logo img {
+  width: 40px;
+  height: auto;
 }
-.nav-menu li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    cursor: pointer;
+
+/* Search Section */
+.nav-search {
+  flex: 1;
+  margin: 0 20px;
+  max-width: 500px;
 }
-.nav-menu hr {
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background-color: #ff4141;
+
+.nav-search form {
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
+
+.nav-search input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.nav-search input:focus {
+  border-color: #007bff;
+}
+
+.nav-search button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-left: 5px; 
+}
+
+.nav-search button:hover {
+  background-color: #0056b3; 
+}
+
+/* Login and Cart Section */
 .nav-login-cart {
-    display: flex;
-    align-items: center;
-    gap: 45px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
+
 .nav-login-cart button {
-    width: 157px;
-    height: 58px;
-    outline: none;
-    border: 1px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: #fff;
-    cursor: pointer;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
 }
-.nav-login-cart button:active {
-    background: #f3f3f3;
+
+/* Cart Link Styles */
+.cart-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #333;
+  position: relative; /* Ensure the counter is positioned relative to this container */
+  transition: color 0.3s;
 }
+
+.cart-link:hover .cart-icon,
+.cart-link:hover .cart-text {
+  color: #007bff; 
+}
+
+.cart-link.active .cart-icon,
+.cart-link.active .cart-text {
+  color: #007bff; 
+}
+
+.cart-icon {
+  font-size: 20px;
+  transition: color 0.3s;
+  position: relative; /* Ensure the counter is positioned relative to the icon */
+}
+
+.cart-text {
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* Cart Count Styles */
 .nav-cart-count {
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -35px;
-    margin-left: -55px;
-    border-radius: 13px;
-    font-size: 14px;
-    background-color: red;
-    color: #fff;
+  position: absolute;
+  top: -3px; 
+  right: 40px; 
+  background-color: red;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Bottom Section */
+.navbar-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-menu li:hover a {
+  color: #007bff;
+}
+
+.nav-menu li hr {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  border: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar-top {
+    padding: 10px;
+  }
+
+  .nav-search {
+    margin: 0 10px;
+    max-width: 300px;
+  }
+
+  .nav-menu {
+    display: none; /* Hide the menu for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-search {
+    margin: 0 5px;
+    max-width: 200px;
+  }
+
+  .nav-search input {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .nav-search button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .nav-login-cart button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .nav-cart-count {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+  }
 }

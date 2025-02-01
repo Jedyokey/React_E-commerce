@@ -1,58 +1,148 @@
 .hero {
-    height: 100vh;
-    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    height: 90vh;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 70px;
 }
+
+/* Left Side */
 .hero-left {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    padding-left: 90px;
+    gap: 15px;
+    padding-left: 50px;
     line-height: 1.1;
+    max-width: 550px;
 }
+
 .hero-left h2 {
-    color: #090909;
-    font-size: 26px;
+    color: #333;
+    font-size: 28px;
     font-weight: 600;
 }
+
 .hero-left p {
     color: #171717;
-    font-size: 70px;
-    font-weight: 400;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1.2;
 }
+
+/* Hand Icon */
 .hero-hand-icon {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
+
 .hero-hand-icon img {
-    width: 105px;
+    width: 90px;
 }
+
+/* Button */
 .hero-latest-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    width: 310px;
-    height: 70px;
-    border-radius: 75px;
-    margin-top: 30px;
+    gap: 10px;
+    width: 280px;
+    height: 65px;
+    border-radius: 50px;
+    margin-top: 25px;
     background: #ff4141;
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
+
+.hero-latest-btn:hover {
+    background: #d93c3c;
+    transform: scale(1.05);
+}
+
+/* Right Side */
 .hero-right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: relative; /* Fix positioning */
+    height: 100%;
 }
+
 .hero-right img {
-    height: 600px;
-    position: absolute;
-    top: -20px;
+    max-height: 550px;
+    width: auto;
+    position: relative; /* Changed from absolute */
+    top: 0; /* Reset downward positioning */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 80px 5%;
+    }
+
+    .hero-left {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .hero-left h2 {
+        font-size: 24px;
+    }
+
+    .hero-left p {
+        font-size: 50px;
+    }
+
+    .hero-latest-btn {
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .hero-right img {
+        max-height: 450px;
+        position: static;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-left h2 {
+        font-size: 22px;
+    }
+
+    .hero-left p {
+        font-size: 42px;
+    }
+
+    .hero-latest-btn {
+        width: 220px;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .hero-hand-icon img {
+        width: 70px;
+    }
+
+    .hero-right img {
+        max-height: 350px;
+    }
 }
