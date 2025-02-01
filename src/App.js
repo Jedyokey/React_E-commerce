@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar/Navbar';
+import SearchPage from './pages/SearchPage/SearchPage';
 import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory/ShopCategory';
 import Product from './pages/Product/Product';
@@ -32,6 +33,7 @@ function App() {
         />
         <Routes>
           <Route path="/" element={<Shop />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/men" element={<ShopCategory banner={men_banner} category="men" />} />
           <Route path="/women" element={<ShopCategory banner={women_banner} category="women" />} />
           <Route path="/kids" element={<ShopCategory banner={kids_banner} category="kid" />} />
