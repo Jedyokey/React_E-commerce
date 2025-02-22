@@ -3,6 +3,7 @@ import { ShopContext } from "../../context/ShopContext";
 import ContinueShoppingButton from "../../components/ContinueShoppingButton/ContinueShoppingButton";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
+import { BsCartX } from "react-icons/bs";
 
 const Cart = () => {
   const { cart, addToCart, removeFromCart, decreaseQuantity, totalPrice } = useContext(ShopContext);
@@ -22,7 +23,10 @@ const Cart = () => {
       <h1 className="cart-title">Your Shopping Cart</h1>
 
       {cart.length === 0 ? (
-          <p className="empty-cart">Your cart is empty. Add some products to the cart!</p>
+        <div className="empty-cart-container">
+          <BsCartX className="empty-cart-icon" />
+          <p className="empty-cart-message">Your cart is empty. Add some products to your cart!</p>
+        </div>
       ) : (
           <div className="cart-container">
             <div className="cart-items-container">
