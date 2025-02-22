@@ -67,6 +67,36 @@
     background: #d93c3c;
 }
 
+/* Responsive Design for <1024px */
+@media (max-width: 1024px) {
+    .newsletter {
+        width: 80%; /* Slightly wider for medium screens */
+        padding: 50px 25px; 
+    }
+
+    .newsletter h1 {
+        font-size: 38px; 
+    }
+
+    .newsletter p {
+        font-size: 17px; 
+    }
+
+    .newsletter-form {
+        width: 90%; 
+        height: 60px; 
+    }
+
+    .newsletter-form input {
+        font-size: 15px; 
+    }
+
+    .newsletter-form button {
+        width: 160px; 
+        font-size: 17px; 
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .newsletter {
@@ -113,5 +143,30 @@
     .newsletter-form button {
         width: 120px;
         font-size: 14px;
+    }
+}
+
+/* Optional: Responsive Design for <389px */
+@media (max-width: 389px) {
+    .newsletter {
+        width: 95%; /* Wider for very small screens */
+        padding: 40px 15px; 
+    }
+
+    .newsletter h1 {
+        font-size: 24px;
+    }
+
+    .newsletter p {
+        font-size: 13px; 
+    }
+
+    .newsletter-form {
+        height: 50px; 
+    }
+
+    .newsletter-form button {
+        width: 100px; 
+        font-size: 13px; 
     }
 }
