@@ -1,83 +1,241 @@
 .login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    background-color: #fce3fe;
-  }
-/* Login Container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  margin-top: -40px;
+  margin-bottom: -50px;
+}
+
 .login-container {
-    max-width: 450px;
-    margin: auto;
-    padding: 60px 60px 60px 35px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-logo img {
+  width: 80px; 
+  height: 64px;
+}
+
+.login-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-fields input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+  outline: none;
+}
+
+.login-fields input:focus {
+  border: 1px solid #2563eb;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background-color: #1d4ed8;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+  margin-top: 20px;
+}
+
+.social-btn {
+  flex: 1; /* Ensures both buttons take equal space */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-btn.google {
+  background-color: #db4437;
+  color: white;
+}
+
+.social-btn.facebook {
+  background-color: #4267B2;
+  color: white;
+}
+
+.social-btn .icon {
+  margin-right: 10px;
+}
+
+.login-signup {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-signup span {
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-signup span:hover {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .login {
+    height: 100vh;
+  }
+
+  .login-container {
+    height: 80vh;
+    padding: 30px;
+  } 
+}
+
+@media screen and (max-width: 1000px) {
+  .login {
+    height: 65vh; 
+  }
+
+  .login-container {
+    padding: 30px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    height: 65vh;
+  }
+
+  .login-container {
+      padding: 20px;
+      max-width: 500px;
+  }
+
+  .login-form button, .social-btn {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login {
+    height: 75vh;
+  }
+
+  .login-container {
+    width: 90%;
+    padding: 15px;
   }
 
   .login-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 20px;
   }
-  
-  /* Form Styles */
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
+
   .login-fields input {
-    width: 100%;
+    padding: 8px;
+  }
+
+  .social-login {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .login {
+    height: 80vh;
+  }
+
+  .login-container {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 10px 0;
   }
-  
-  .login-fields input:focus {
-    border-color: #2563eb;
-    outline: none;
-    box-shadow: 0 0 4px rgba(37, 99, 235, 0.5);
-  }
-  
-  /* Button */
-  .login-form button {
-    width: 475px;
-    padding: 12px;
-    background-color: #2563eb;
-    color: white;
+
+  .login-container h1 {
     font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: -10px;
   }
-  
-  .login-form button:hover {
-    background-color: #1d4ed8;
+
+  .login-fields input {
+    font-size: 12px;
+    padding: 6px;
   }
-  
-  /* Signup Link */
-    .login-signup {
-        margin-top: 15px;
-        text-align: center;
-        font-size: 14px;
-        color: #555;
-    }
-    
-  .login-signup span {
-    color: #2563eb;
-    cursor: pointer;
-    text-decoration: underline;
+
+  .continue-btn {
+    font-size: 12px;
+    padding: 8px;
   }
-  
-  .login-signup span:hover {
-    color: #1d4ed8;
-    font-weight: bold;
+
+  .login-signup {
+    font-size: 11px;
   }
-  
+
+  .login-form button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .social-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
