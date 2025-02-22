@@ -6,7 +6,7 @@ import tiktok_icon from '../assets/icons8-tiktok-100.png';
 import facebook_icon from '../assets/facebook-1.png';
 import visa_icon from '../assets/visa-card.jpg';
 import mastercard_icon from '../assets/master-card.jpg';
-import paypal_icon from '../assets/paypal.jpg';
+import paypal_icon from '../assets/paypal.jpg'; 
 
 const Footer = () => {
     const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ const Footer = () => {
 
     console.log("Subscribed with:", email);
     alert("Thank you for subscribing!");
-
+    
     setEmail(""); // Clear input field after submission
   };
 

@@ -4,8 +4,8 @@ import './NewsLetter.css';
 const NewsLetter = () => {
   const [email, setEmail] = useState(""); // State to store email input
 
-  const handleSubscription = (event) => { 
-    event.preventDefault();
+  const handleSubscription = (e) => { 
+    e.preventDefault();
     
     if (!email.trim()) {
       alert("Please enter a valid email address.");

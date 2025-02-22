@@ -115,3 +115,183 @@
     width: 50px;
   }
   
+
+/* Responsive Styles for screens less than 1024px */
+@media (max-width: 1024px) {
+  .footer-container {
+      grid-template-columns: repeat(3, 1fr); /* Reduce to 3 columns */
+      gap: 15px; 
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+
+  .footer-section h4 {
+      font-size: 15px; 
+  }
+
+  .footer-logo p {
+      font-size: 16px; /* Reduce font size for logo text */
+  }
+
+  .footer .newsletters-form {
+      gap: 5px; 
+  }
+
+  .footer .newsletters-form input {
+      width: 100%; /* Make input take up full width */
+      max-width: 250px; /* Limit input width */
+  }
+
+  .footer .newsletters-form button {
+      width: 100%; /* Make button take up full width */
+      max-width: 80px; /* Limit button width */
+  }
+} 
+
+/* Footer Section - Responsive Styles (768px and below) */
+@media (max-width: 768px) {
+  .footer {
+      padding: 30px 10px; 
+  }
+
+  .footer-container {
+      grid-template-columns: 2fr; /* Stack sections vertically */
+      gap: 30px; 
+      text-align: center; 
+  }
+
+  .footer-section h4 {
+      font-size: 18px; 
+  }
+
+  .footer-logo {
+      justify-content: center; /* Center-align logo and text */
+  }
+
+  .footer-logo p {
+      font-size: 16px; 
+  }
+
+  .footer-links {
+      padding: 0; /* Remove default padding */
+  }
+
+  .footer-links li {
+      margin-bottom: 10px; 
+  }
+
+  .footer .newsletters-form { 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+  }
+
+  .footer .newsletters-form input {
+      width: 100%; 
+      max-width: 350px; 
+      padding: 8px 12px; 
+  }
+
+  .footer .newsletters-form button {
+      width: 100%; 
+      max-width: 120px; 
+      padding: 8px 12px; 
+  }
+
+  .footer-social-icons {
+      justify-content: center; 
+  }
+
+  .footer-payment-icons {
+      flex-wrap: wrap; 
+      justify-content: center; 
+  }
+
+  .footer-bottom {
+      font-size: 12px; 
+  }
+} 
+
+/* Mobile Responsiveness (480px and below) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px; 
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .footer-section h4 {
+    font-size: 16px; 
+  }
+
+  .footer-logo p {
+    font-size: 15px; 
+  }
+
+  .footer-links li {
+    margin-bottom: 8px; 
+  }
+
+  .footer .newsletters-form input {
+    max-width: 93.5%; /* Full width for input on mobile */
+  }
+
+  .footer .newsletters-form button {
+    max-width: 100%; 
+  }
+
+  .footer-social-icons img {
+    width: 25px; /* Smaller social icons for mobile */
+  }
+
+  .footer-payment-icons img {
+    width: 40px; /* Smaller payment icons for mobile */
+  }
+
+  .footer-bottom {
+    font-size: 11px; 
+  }
+}
+
+/* Responsive Styles for screens 389px and below */
+@media (max-width: 389px) {
+  .footer {
+      padding: 15px 10px; 
+  }
+
+  .footer-section h4 {
+      font-size: 14px; 
+  }
+
+  .footer-logo p {
+      font-size: 13px; 
+  }
+
+  .footer-links li {
+      margin-bottom: 6px; /* Reduce spacing between links */
+  }
+
+  .footer .newsletters-form input {
+      padding: 6px 10px; 
+  }
+
+  .footer .newsletters-form button {
+      padding: 6px 10px; 
+  }
+
+  .footer-social-icons img {
+      width: 20px; 
+  }
+
+  .footer-payment-icons img {
+      width: 35px; /* Smaller payment icons for very small screens */
+  }
+
+  .footer-bottom {
+      font-size: 10px; /* Smaller font size for very small screens */
+  }
+}
