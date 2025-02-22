@@ -5,14 +5,14 @@ import Offers from '../components/Offers/Offers'
 import NewCollections from '../components/NewCollections/NewCollections'
 import NewsLetter from '../components/NewsLetter/NewsLetter'
 
-const Shop = () => {
+const Shop = ({ scrollToNewCollection, newCollectionRef }) => {
   return (
     <div>
-        <Hero />
+        <Hero scrollToNewCollection={scrollToNewCollection} />
         <Popular />
         <Offers />
-        <NewCollections />
-        <NewsLetter />
+        <NewCollections ref={newCollectionRef} />
+        <NewsLetter /> 
     </div>
   )
 }

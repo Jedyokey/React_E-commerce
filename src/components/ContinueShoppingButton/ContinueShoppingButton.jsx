@@ -6,7 +6,7 @@ const ContinueShoppingButton = ({ onClick }) => {
   return (
     <div>
         <button className="continue-shopping-button" onClick={onClick}> 
-            <img src={back_arrow} alt="" /> Continue Shopping
+            <img src={back_arrow} alt="Continue Shopping" /> Continue Shopping
         </button>
     </div>
   )
