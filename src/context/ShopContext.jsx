@@ -7,19 +7,29 @@ export const ShopContext = createContext(null);
 
 const ShopContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
+    
+    const [cart, setCart] = useState(() => {
+        // Load cart from localStorage on initial render
+        const savedCart = localStorage.getItem('cart');
+        return savedCart ? JSON.parse(savedCart) : [];
+    });
 
     useEffect(() => {
         setProducts(all_product);
     }, []);
 
+    // Save cart to localStorage whenever it changes
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
     // Add a product to the cart with a toast notification
     const addToCart = (product) => {
         setCart((prevCart) => {
-            // Check if the same product with the same size exists
+            // Check if the same product with the same size exists in the cart
             const existingProduct = prevCart.find(
-                (item) => item.id === product.id && item.size === product.size // Check size too!
+                (item) => item.id === product.id && item.size === product.size
             );
 
             if (existingProduct) {
@@ -31,18 +41,23 @@ const ShopContextProvider = ({ children }) => {
                 );
             } else {
                 // If product is new, add to cart and show toast ONCE
+                const isMobile = window.innerWidth <= 768; // Check if screen width is mobile size
+                const message = isMobile
+                    ? "Item added to cart!"
+                    : `${product.name} (Size: ${product.size}) added to cart!`;
+
                 if (!toast.isActive(product.id)) { // Check if toast is already active
-                    toast.success(`${product.name} (Size: ${product.size}) added to cart!`, {
+                    toast.success(message, {
                         toastId: product.id, // Unique ID for the toast
                         position: "top-right",
                         autoClose: 3000,
-                        transition: Slide, // Slower slide animation
+                        transition: Slide,
                         style: {
-                            width: "500px",
-                            backgroundColor: "#20B2AA", 
-                            color: "#fff", 
+                            maxWidth: isMobile ? "300px" : "600px",
+                            backgroundColor: "#20B2AA",
+                            color: "#fff",
                             border: "1px solid #c6f6d5",
-                            borderRadius: "8px", 
+                            borderRadius: "8px",
                             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
                         },
                     });
@@ -53,9 +68,8 @@ const ShopContextProvider = ({ children }) => {
         });
     };
 
-    // Remove a product from the cart
+    // Remove a product from the cart with a toast notification
     const removeFromCart = (productId, size) => {
-        // console.log("Removing product:", productId, size); // Debug log
         const removedProduct = cart.find(
             (item) => item.id === productId && item.size === size
         );
@@ -65,25 +79,29 @@ const ShopContextProvider = ({ children }) => {
         );
 
         if (removedProduct) {
-            toast.info(`${removedProduct.name} (Size: ${removedProduct.size}) removed!`, {
+            const isMobile = window.innerWidth <= 768; // Check if screen width is mobile size
+            const message = isMobile
+                ? "Item removed from cart!"
+                : `${removedProduct.name} (Size: ${removedProduct.size}) removed!`;
+
+            toast.info(message, {
                 position: "top-right",
                 autoClose: 3000,
                 closeButton: true,
                 draggable: true,
                 transition: Slide, // Slower animation
                 style: {
-                    width: "500px", 
+                    maxWidth: isMobile ? "300px" : "600px",
                     color: "#fff",
-                    borderRadius: "8px", 
-                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", 
-                }
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                },
             });
         }
     };
 
-    // Decrease quantity
+    // Decrease quantity of a product in the cart
     const decreaseQuantity = (productId, size) => {
-        // console.log("Decreasing quantity for product:", productId, size); // Debug log
         setCart((prevCart) =>
             prevCart
                 .map((item) =>
@@ -95,7 +113,7 @@ const ShopContextProvider = ({ children }) => {
         );
     };
 
-    // Search products
+    // Search products based on query
     const searchProducts = (query) => {
         const filteredProducts = products.filter(product =>
             product.name.toLowerCase().includes(query.toLowerCase())
@@ -103,7 +121,7 @@ const ShopContextProvider = ({ children }) => {
         setSearchResults(filteredProducts);
     };
 
-    // Total calculations
+    // Total calculations for cart
     const totalPrice = cart.reduce((total, item) => total + item.new_price * item.quantity, 0);
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
