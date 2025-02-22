@@ -7,6 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 /* Top Section */
@@ -41,7 +42,7 @@
 
 /* Search Section */
 .nav-search {
-  flex: 1;
+  flex: 1; 
   margin: 0 20px;
   max-width: 500px;
 }
@@ -99,6 +100,10 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
+}
+
+.nav-login-cart button .user-icon {
+  display: none;
 }
 
 /* Cart Link Styles */
@@ -162,6 +167,7 @@
 
 .nav-menu {
   display: flex;
+  justify-content: center;
   gap: 20px;
   list-style: none;
   margin: 0;
@@ -195,46 +201,292 @@
   border: none;
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .navbar-top {
-    padding: 10px;
-  }
-
-  .nav-search {
-    margin: 0 10px;
-    max-width: 300px;
-  }
-
-  .nav-menu {
-    display: none; /* Hide the menu for mobile */
-  }
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 9px;
 }
 
-@media (max-width: 480px) {
+/* Mobile Search Bar */
+.mobile-search-bar {
+  display: none; /* Hidden by default */
+  padding: 10px;
+  background-color: #f8f8f8; 
+  border-bottom: 1px solid #e0e0e0; 
+}
+
+.mobile-search-bar form {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.mobile-search-bar input[type="text"] {
+  flex: 1; /* Take up remaining space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.mobile-search-bar input[type="text"]::placeholder {
+  color: #999; /* Placeholder text color */
+}
+
+.mobile-search-bar button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #007bff; 
+  color: #fff; 
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.mobile-search-bar button[type="submit"]:hover {
+  background-color: #0056b3; 
+}
+
+.search-icon {
+  font-size: 16px; 
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+
+/* Media Queries for <1024px */
+@media screen and (max-width: 1024px) {
+  .navbar-top {
+    padding: 10px 20px; 
+  }
+
   .nav-search {
-    margin: 0 5px;
-    max-width: 200px;
+    margin: 0 10px; 
+    max-width: 400px; 
   }
 
   .nav-search input {
-    padding: 6px 10px;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .nav-search button {
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 8px 12px; 
+    font-size: 13px; 
+  }
+
+  .nav-login-cart {
+    gap: 10px; 
   }
 
   .nav-login-cart button {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 8px 12px; 
+    font-size: 13px; 
+  }
+
+  .cart-text {
+    font-size: 14px; 
+  }
+
+  .cart-icon {
+    font-size: 18px; 
+  }
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .test {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hamburger menu on the left */
+  .mobile-menu-icon {
+    display: block;
+    font-size: 24px;
+    order: 1; /* Ensures it comes first */
+  }
+
+  /* Centering the logo */
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center; /* Center logo */
+    order: 2; /* Ensures it comes second */
+  }
+
+  /* Login and Cart on the right */
+  .nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    order: 3; /* Ensures it comes last */
+  }
+
+  .nav-login-cart button .user-icon {
+    display: none;
+  }
+  
+  /* Desktop search bar hidden */
+  .nav-search {
+    display: none;
+  }
+
+  /* Hide Bottom Navbar on Mobile */
+  .navbar-bottom {
+    display: none;
+  }
+
+  /* Show Mobile Menu */
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .mobile-menu.open {
+    max-height: 60px;
+    opacity: 1;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .mobile-menu li {
+    padding: 10px 0;
+  }
+
+  .mobile-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .mobile-menu li a:hover {
+    color: #007bff;
+  }
+
+  /* Display mobile search bar */
+  .mobile-search-bar {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Hide cart text on mobile */
+  .cart-text {
+    display: none;
+  }
+
+  .nav-login-cart button .user {
+    display: none;
+  } 
+
+  .nav-login-cart button {
+    color: #000;
+    background-color: transparent;
+  }
+
+  .nav-login-cart button .user-icon {
+    display: block;
+    font-size: 20px;
+    background-color: transparent;
   }
 
   .nav-cart-count {
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
+    right: -5px; /* Adjust position for mobile */
+  }
+}
+
+
+/* Media Queries for <389px */
+@media screen and (max-width: 389px) {
+  .navbar-top {
+    padding: 10px 10px; 
+  }
+
+  .nav-logo a {
+    font-size: 16px; 
+  }
+
+  .nav-logo img {
+    width: 30px; 
+  }
+
+  .mobile-menu-icon {
+    font-size: 20px; 
+  }
+
+  .nav-login-cart button {
+    padding: 6px 10px;
+    font-size: 12px; 
+  }
+
+  .cart-icon {
+    font-size: 16px; 
+  }
+
+  .nav-cart-count {
+    right: -3px; /* Adjust cart count position */
+    font-size: 8px; 
+    width: 14px;
+    height: 14px;
+  }
+
+  .mobile-menu.mobile-view {
+    width: 200px; 
+  }
+
+  .mobile-search-bar input[type="text"] {
+    font-size: 12px; 
+  }
+
+  .mobile-search-bar button[type="submit"] {
+    padding: 8px 12px; 
+    font-size: 12px; 
   }
 }

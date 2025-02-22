@@ -1,108 +1,25 @@
-// import React, { useState, useContext, useEffect } from 'react';
-// import { Link, useLocation } from 'react-router-dom';
-// import { HiOutlineShoppingCart } from "react-icons/hi2";
-// import './Navbar.css';
-// import logo from "../assets/logo.png";
-// import { ShopContext } from '../../context/ShopContext';
-
-// const Navbar = () => {
-//   const [menu, setMenu] = useState("");
-//   const { cartCount } = useContext(ShopContext);
-//   const location = useLocation();
-
-//   // Check if the cart link is active
-//   const isCartActive = location.pathname === '/cart';
-
-//   useEffect(() => {
-//     const path = location.pathname;
-//     if (path === '/men') {
-//       setMenu('men');
-//     } else if (path === '/women') {
-//       setMenu('women');
-//     } else if (path === '/kids') {
-//       setMenu('kids');
-//     } else if (path === '/') {
-//       setMenu('shop');
-//     } else {
-//       setMenu('');
-//     }
-//   }, [location]);
-
-//   return (
-//     <div className="navbar">
-//       {/* Top Section */}
-//       <div className="navbar-top">
-//         <div className="nav-logo">
-//           <Link to="/">
-//             <img src={logo} alt="Logo" />
-//             <p>SHOPPER</p>
-//           </Link>
-//         </div>
-//         <div className="nav-search">
-//           <form onSubmit={(e) => e.preventDefault()}>
-//             <input
-//               type="text"
-//               placeholder="Search products, brands, and categories"
-//             />
-//             <button type="submit">Search</button>
-//           </form>
-//         </div>
-//         <div className="nav-login-cart">
-//           <Link to="/login_signup">
-//             <button>Login</button>
-//           </Link>
-//           <Link to="/cart" className={`cart-link ${isCartActive ? 'active' : ''}`} >
-//             <HiOutlineShoppingCart className="cart-icon" />
-//             <div className="nav-cart-count">{cartCount}</div>
-//             <span className="cart-text">Cart</span>
-//           </Link>
-//         </div>
-//       </div> 
-
-//       {/* Bottom Section */}
-//       <div className="navbar-bottom">
-//         <ul className="nav-menu">
-//           <li onClick={() => setMenu('shop')}>
-//             <Link to="/">Shop</Link>
-//             {menu === 'shop' && <hr />}
-//           </li>
-//           <li onClick={() => setMenu('men')}>
-//             <Link to="/men">Men</Link>
-//             {menu === 'men' && <hr />}
-//           </li>
-//           <li onClick={() => setMenu('women')}>
-//             <Link to="/women">Women</Link>
-//             {menu === 'women' && <hr />}
-//           </li>
-//           <li onClick={() => setMenu('kids')}>
-//             <Link to="/kids">Kids</Link>
-//             {menu === 'kids' && <hr />}
-//           </li>
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
-
-
 import React, { useState, useContext, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { HiOutlineShoppingCart } from "react-icons/hi2";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { HiMenu, HiX } from "react-icons/hi";
+import { FaSearch, FaRegUser } from "react-icons/fa"; 
 import './Navbar.css';
 import logo from "../assets/logo.png";
 import { ShopContext } from '../../context/ShopContext';
+import Login from '../../pages/Login/Login'; 
+import LoginSignUp from '../../pages/LoginSignUp/LoginSignUp'; 
 
 const Navbar = () => {
   const [menu, setMenu] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const { cartCount, searchProducts } = useContext(ShopContext);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false); // State for login modal
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false); // State for sign-up modal
+
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Check if the cart link is active
   const isCartActive = location.pathname === '/cart';
 
   useEffect(() => {
@@ -115,7 +32,7 @@ const Navbar = () => {
       setMenu('kids');
     } else if (path === '/') {
       setMenu('shop');
-    } else {
+    } else { 
       setMenu('');
     }
   }, [location]);
@@ -124,21 +41,51 @@ const Navbar = () => {
     e.preventDefault();
     if (searchQuery.trim()) {
       searchProducts(searchQuery);
-      setSearchQuery(""); // Clear the search input field
+      setSearchQuery("");
       navigate('/search');
     }
+  };
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
+  const openSignUpModal = () => {
+    setIsSignUpModalOpen(true);
+  };
+
+  const closeSignUpModal = () => {
+    setIsSignUpModalOpen(false);
   };
 
   return (
     <div className="navbar">
       {/* Top Section */}
       <div className="navbar-top">
-        <div className="nav-logo">
-          <Link to="/">
-            <img src={logo} alt="Logo" />
-            <p>SHOPPER</p>
-          </Link>
+        <div className="test">
+          <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+          </div>
+          <div className="nav-logo">
+            <Link to="/">
+              <img src={logo} alt="Logo" />
+              <p>SHOPPER</p>
+            </Link>
+          </div>
         </div>
+
         <div className="nav-search">
           <form onSubmit={handleSearch}>
             <input
@@ -150,20 +97,22 @@ const Navbar = () => {
             <button type="submit">Search</button>
           </form>
         </div>
-        <div className="nav-login-cart">
-          <Link to="/login_signup">
-            <button>Login</button>
-          </Link>
+        
+        <div className="nav-login-cart"> 
+          <button onClick={openLoginModal}> {/* Open login modal on click */}
+            <FaRegUser className='user-icon' />
+            <span className="user">Login</span>   
+          </button>                                             
           <Link to="/cart" className={`cart-link ${isCartActive ? 'active' : ''}`} >
-            <HiOutlineShoppingCart className="cart-icon" />
+            <MdOutlineShoppingCart className="cart-icon" size={24} />
             <div className="nav-cart-count">{cartCount}</div>
             <span className="cart-text">Cart</span>
           </Link>
         </div>
       </div> 
 
-      {/* Bottom Section */}
-      <div className="navbar-bottom">
+      {/* Bottom Section - Mobile Menu Links */}
+      <div className={`mobile-menu ${isMobileMenuOpen ? "open" : "navbar-bottom"}`}>
         <ul className="nav-menu">
           <li onClick={() => setMenu('shop')}>
             <Link to="/">Shop</Link>
@@ -183,6 +132,48 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Overlay for mobile menu */}
+      {isMobileMenuOpen && ( 
+        <div className="mobile-menu-overlay open" onClick={toggleMobileMenu} />
+      )} 
+
+      {/* Mobile Search Bar */}
+      <div className="mobile-search-bar">
+        <form onSubmit={handleSearch}>
+          <input
+            type="text"
+            placeholder="Search products, brands, and categories"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button type="submit">
+            <FaSearch className="search-icon" />
+          </button>
+        </form>
+      </div>
+
+      {/* Login Modal and Overlay */}
+      {isLoginModalOpen && (
+        <>
+          <div className="modal-overlay" onClick={closeLoginModal} />
+          <div className="login-modal">
+            <button className="close-modal" onClick={closeLoginModal}><HiX size={24} /></button>
+            <Login onClose={closeLoginModal} openSignUpModal={openSignUpModal} /> {/* Pass openSignUpModal to Login */}
+          </div>
+        </>
+      )}
+
+      {/* Sign Up Modal and Overlay */}
+      {isSignUpModalOpen && (
+        <>
+          <div className="modal-overlay" onClick={closeSignUpModal} />
+          <div className="login-modal">
+            <button className="close-modal" onClick={closeSignUpModal}>×</button>
+            <LoginSignUp onClose={closeSignUpModal} openLoginModal={openLoginModal} /> {/* Render LoginSignUp component */}
+          </div>
+        </>
+      )}
     </div>
   );
 };
