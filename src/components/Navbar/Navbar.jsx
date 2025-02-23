@@ -8,6 +8,7 @@ import logo from "../assets/logo.png";
 import { ShopContext } from '../../context/ShopContext';
 import Login from '../../pages/Login/Login'; 
 import LoginSignUp from '../../pages/LoginSignUp/LoginSignUp'; 
+import Modal from '../../components/Modal/Modal'; 
 
 const Navbar = () => {
   const [menu, setMenu] = useState("");
@@ -70,6 +71,26 @@ const Navbar = () => {
     setIsSignUpModalOpen(false);
   };
 
+  useEffect(() => {
+    if (isLoginModalOpen || isSignUpModalOpen) {
+      document.body.classList.add('modal-open');
+    } else {
+      document.body.classList.remove('modal-open');
+    }
+  }, [isLoginModalOpen, isSignUpModalOpen]);
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeLoginModal();
+        closeSignUpModal();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
+
   return (
     <div className="navbar">
       {/* Top Section */}
@@ -99,7 +120,7 @@ const Navbar = () => {
         </div>
         
         <div className="nav-login-cart"> 
-          <button onClick={openLoginModal}> {/* Open login modal on click */}
+          <button onClick={openLoginModal} aria-label="Open Login Modal"> {/* Open login modal on click */}
             <FaRegUser className='user-icon' />
             <span className="user">Login</span>   
           </button>                                             
@@ -153,27 +174,15 @@ const Navbar = () => {
         </form>
       </div>
 
-      {/* Login Modal and Overlay */}
-      {isLoginModalOpen && (
-        <>
-          <div className="modal-overlay" onClick={closeLoginModal} />
-          <div className="login-modal">
-            <button className="close-modal" onClick={closeLoginModal}><HiX size={24} /></button>
-            <Login onClose={closeLoginModal} openSignUpModal={openSignUpModal} /> {/* Pass openSignUpModal to Login */}
-          </div>
-        </>
-      )}
+      {/* Login Modal */}
+      <Modal isOpen={isLoginModalOpen} onClose={closeLoginModal}>
+        <Login onClose={closeLoginModal} openSignUpModal={openSignUpModal} />
+      </Modal>
 
-      {/* Sign Up Modal and Overlay */}
-      {isSignUpModalOpen && (
-        <>
-          <div className="modal-overlay" onClick={closeSignUpModal} />
-          <div className="login-modal">
-            <button className="close-modal" onClick={closeSignUpModal}>×</button>
-            <LoginSignUp onClose={closeSignUpModal} openLoginModal={openLoginModal} /> {/* Render LoginSignUp component */}
-          </div>
-        </>
-      )}
+      {/* Sign Up Modal */}
+      <Modal isOpen={isSignUpModalOpen} onClose={closeSignUpModal}>
+        <LoginSignUp onClose={closeSignUpModal} openLoginModal={openLoginModal} />
+      </Modal>
     </div>
   );
 };

@@ -18,4 +18,6 @@ code {
     monospace;
 }
 
-
+body.modal-open {
+  overflow: hidden;
+}
