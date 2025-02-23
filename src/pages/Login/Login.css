@@ -1,11 +1,11 @@
+/* Login Container */
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 50vh;
+  /* min-height: 80vh; */
   padding: 20px;
-  margin-top: -40px;
-  margin-bottom: -50px;
 }
 
 .login-container {
@@ -24,7 +24,7 @@
 }
 
 .login-logo img {
-  width: 80px; 
+  width: 80px;
   height: 64px;
 }
 
@@ -36,6 +36,7 @@
   text-align: center;
 }
 
+/* Login Form */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -66,6 +67,11 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  color: gray; /* Add color for better visibility */
+}
+
+.password-toggle-icon:hover {
+  color: darkgray; /* Add hover effect */
 }
 
 .login-form button {
@@ -84,15 +90,16 @@
   background-color: #1d4ed8;
 }
 
+/* Social Login Buttons */
 .social-login {
   display: flex;
   justify-content: space-between;
-  gap: 10px; 
+  gap: 10px;
   margin-top: 20px;
 }
 
 .social-btn {
-  flex: 1; /* Ensures both buttons take equal space */
+  flex: 1;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -109,15 +116,20 @@
   color: white;
 }
 
+.social-btn.google:hover {
+  background-color: #c23321; /* Darker shade on hover */
+}
+
 .social-btn.facebook {
-  background-color: #4267B2;
+  background-color: #4267b2;
   color: white;
 }
 
-.social-btn .icon {
-  margin-right: 10px;
+.social-btn.facebook:hover {
+  background-color: #365899; /* Darker shade on hover */
 }
 
+/* Sign Up Link */
 .login-signup {
   margin-top: 15px;
   text-align: center;
@@ -136,40 +148,23 @@
   font-weight: bold;
 }
 
-@media (max-width: 1024px) {
-  .login {
-    height: 100vh;
-  }
-
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
   .login-container {
-    height: 80vh;
-    padding: 30px;
-  } 
-}
-
-@media screen and (max-width: 1000px) {
-  .login {
-    height: 65vh; 
-  }
-
-  .login-container {
-    padding: 30px;
     height: auto;
+    padding: 30px;
   }
 }
 
-@media (max-width: 768px) {
-  .login {
-    height: 65vh;
-  }
-
+@media screen and (max-width: 768px) {
   .login-container {
-      padding: 20px;
-      max-width: 500px;
+    padding: 20px;
+    max-width: 500px;
   }
 
-  .login-form button, .social-btn {
-      font-size: 14px;
+  .login-form button,
+  .social-btn {
+    font-size: 14px;
   }
 }
 
@@ -220,15 +215,6 @@
     padding: 6px;
   }
 
-  .continue-btn {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  .login-signup {
-    font-size: 11px;
-  }
-
   .login-form button {
     font-size: 12px;
     padding: 8px;
@@ -237,5 +223,9 @@
   .social-btn {
     font-size: 12px;
     padding: 8px;
+  }
+
+  .login-signup {
+    font-size: 11px;
   }
 }

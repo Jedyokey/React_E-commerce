@@ -8,7 +8,6 @@ const Login = ({ onClose, openSignUpModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login form submission
     console.log('Logged in!');
   };
 
