@@ -1,4 +1,4 @@
 [build]
-  base = "E-commerce/frontend"
-  publish = "E-commerce/frontend/build"
+  base = "frontend"
+  publish = "frontend/build"
   command = "npm run build"
