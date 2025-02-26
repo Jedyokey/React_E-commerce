@@ -113,11 +113,33 @@ const ShopContextProvider = ({ children }) => {
         );
     };
 
-    // Search products based on query
+    // Enhanced search functionality
     const searchProducts = (query) => {
-        const filteredProducts = products.filter(product =>
-            product.name.toLowerCase().includes(query.toLowerCase())
+        const lowerCaseQuery = query.toLowerCase();
+    
+        // Check if the query matches any category exactly
+        const isCategorySearch = products.some(
+            product => product.category.toLowerCase() === lowerCaseQuery
         );
+    
+        let filteredProducts;
+    
+        if (isCategorySearch) {
+            // If the query matches a category exactly, return only products in that category
+            filteredProducts = products.filter(
+                product => product.category.toLowerCase() === lowerCaseQuery
+            );
+        } else {
+            // Otherwise, fall back to partial matches in name, tags, and categories
+            filteredProducts = products.filter(product => {
+                const matchesName = product.name.toLowerCase().includes(lowerCaseQuery);
+                const matchesTags = product.tags.some(tag => tag.toLowerCase().includes(lowerCaseQuery));
+                const matchesCategories = product.categories.some(cat => cat.toLowerCase().includes(lowerCaseQuery));
+    
+                return matchesName || matchesTags || matchesCategories;
+            });
+        }
+    
         setSearchResults(filteredProducts);
     };
 

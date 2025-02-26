@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./ShopCategory.css";
 import { ShopContext } from "../../context/ShopContext";
 import Item from "../../components/Item/Item";
@@ -7,8 +7,13 @@ const ShopCategory = ({ banner, category }) => {
   const { products } = useContext(ShopContext);
   const [sortOption, setSortOption] = useState("default");
 
+  // Reset sortOption when category changes
+  useEffect(() => {
+    setSortOption("default");
+  }, [category]);
+
   const sortedProducts = [...products]
-    .filter((item) => item.category === category)
+    .filter((item) => item.category === category) // Filter products by category
     .sort((a, b) => {
       if (sortOption === "price-low-high") return a.new_price - b.new_price;
       if (sortOption === "price-high-low") return b.new_price - a.new_price;
@@ -54,4 +59,3 @@ const ShopCategory = ({ banner, category }) => {
 };
 
 export default ShopCategory;
-
