@@ -1,0 +1,107 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 4px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collections > * {
+    flex: 1 1 calc(25% - 30px);
+    max-width: calc(25% - 30px);
+}
+
+
+/* Responsive Styles for <1024px */
+@media (max-width: 1024px) {
+    .new-collections {
+        padding: 0 15px; 
+        margin-bottom: 80px; 
+    }
+
+    .new-collections h1 {
+        font-size: 32px; 
+    }
+
+    .new-collections hr {
+        width: 180px; 
+        height: 3.5px; 
+    }
+
+    .collections {
+        margin-top: 40px; 
+        gap: 18px; 
+    }
+
+    .collections > * {
+        flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+        max-width: calc(33.33% - 20px); /* 3 items per row */
+    }
+}
+
+/* New Collections Section - Responsive Styles (768px and below) */
+@media (max-width: 768px) {
+    .new-collections {
+        padding: 0 10px; 
+        margin-bottom: 50px; 
+    }
+
+    .new-collections h1 {
+        font-size: 28px; 
+    }
+
+    .new-collections hr {
+        width: 150px; 
+        height: 3px; 
+    }
+
+    .collections {
+        margin-top: 30px; 
+        gap: 15px; /* Reduce gap between items */
+    }
+
+    .collections > * {
+        flex: 1 1 calc(50% - 15px); /* 2 items per row */
+        max-width: calc(50% - 15px); /* 2 items per row */
+    }
+}
+
+/* New Collections Section - Responsive Styles (480px and below) */
+@media (max-width: 480px) {
+    .new-collections h1 {
+        font-size: 24px; 
+    }
+
+    .new-collections hr {
+        width: 120px; 
+        height: 2px; 
+    }
+
+    .collections > * {
+        flex: 1 1 100%; /* 1 item per row */
+        max-width: 100%; /* 1 item per row */
+    }
+}

@@ -1,0 +1,258 @@
+/* Login/Signup Container */
+.loginsignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 60vh; */
+  min-height: 50vh;
+  padding: 20px;
+}
+
+.loginsignup-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-logo img {
+  width: 80px;
+  height: 64px;
+}
+
+.loginsignup-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Login/Signup Form */
+.loginsignup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loginsignup-fields input {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 0;
+  outline: none;
+}
+
+.loginsignup-fields input:focus {
+  border: 1px solid #2563eb;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input:focus {
+  border: 1px solid #2563eb;
+  outline: none;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: gray; /* Gray color for the icon */
+}
+
+.password-toggle-icon:hover {
+  color: darkgray; /* Darker shade on hover */
+}
+
+/* Agreement Checkbox */
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.loginsignup-agree input {
+  cursor: pointer;
+}
+
+.loginsignup-agree label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Continue Button */
+.continue-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.continue-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.continue-btn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+/* Login Link */
+.loginsignup-login {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.loginsignup-login span {
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.loginsignup-login span:hover {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .loginsignup-container {
+    height: auto;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .loginsignup {
+    height: 65vh;
+  }
+
+  .loginsignup-container {
+    padding: 30px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loginsignup {
+    height: 65vh;
+  }
+
+  .loginsignup-container {
+    max-width: 500px;
+    padding: 20px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 22px;
+  }
+
+  .loginsignup-fields input {
+    font-size: 14px;
+  }
+
+  .continue-btn {
+    font-size: 16px;
+  }
+
+  .loginsignup-login {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .loginsignup {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loginsignup {
+    height: 75vh;
+  }
+
+  .loginsignup-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 20px;
+  }
+
+  .loginsignup-fields input {
+    padding: 8px;
+  }
+
+  .continue-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .loginsignup-agree label {
+    font-size: 12px;
+  }
+
+  .loginsignup-login {
+    font-size: 12px;
+  }
+
+  .password-toggle-icon {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .loginsignup {
+    height: 80vh;
+  }
+
+  .loginsignup-container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .loginsignup-container h1 {
+    font-size: 18px;
+  }
+
+  .loginsignup-fields input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .continue-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .loginsignup-agree label {
+    font-size: 11px;
+  }
+
+  .loginsignup-login {
+    font-size: 11px;
+  }
+
+  .password-toggle-icon {
+    font-size: 12px;
+  }
+}

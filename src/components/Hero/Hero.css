@@ -1,0 +1,228 @@
+.hero {
+    height: 90vh;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+/* Left Side */
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 50px;
+    line-height: 1.1;
+    max-width: 550px;
+}
+
+.hero-left h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.hero-left p {
+    color: #171717;
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Hand Icon */
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-hand-icon img {
+    width: 90px;
+}
+
+/* Button */
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 280px;
+    height: 65px;
+    border-radius: 50px;
+    margin-top: 25px;
+    background: #ff4141;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-latest-btn:hover {
+    background: #d93c3c;
+    transform: scale(1.05);
+}
+
+/* Right Side */
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Fix positioning */
+    height: 100%;
+}
+
+.hero-right img {
+    max-height: 550px;
+    width: auto;
+    position: relative; /* Changed from absolute */
+    top: 0; /* Reset downward positioning */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 80px 5%;
+    }
+
+    .hero-left {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .hero-left h2 {
+        font-size: 24px;
+    }
+
+    .hero-left p {
+        font-size: 50px;
+    }
+
+    .hero-latest-btn {
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .hero-right img {
+        max-height: 450px;
+        position: static;
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: auto; /* Adjust height for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+        padding: 40px 5%; /* Adjust padding for smaller screens */
+        margin-bottom: 50px; 
+    }
+
+    .hero-left {
+        align-items: center; /* Center content horizontally */
+        padding-left: 0; 
+        gap: 10px; 
+        text-align: center; 
+    }
+
+    .hero-left h2 {
+        font-size: 20px; 
+    }
+
+    .hero-left p {
+        font-size: 36px; 
+    }
+
+    .hero-hand-icon img {
+        width: 60px; 
+    }
+
+    .hero-latest-btn {
+        width: 200px; 
+        height: 50px; 
+        font-size: 16px; 
+        margin-top: 20px; 
+    }
+
+    .hero-right {
+        margin-top: 20px; 
+    }
+
+    .hero-right img {
+        max-height: 300px; /* Reduce image size for smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 30px 5%; 
+        margin-bottom: 30px; 
+    }
+
+    .hero-left h2 {
+        font-size: 18px; 
+    }
+
+    .hero-left p {
+        font-size: 28px; 
+    }
+
+    .hero-hand-icon img {
+        width: 50px; 
+    }
+
+    .hero-latest-btn {
+        width: 180px; 
+        height: 45px; 
+        font-size: 14px; 
+        margin-top: 15px; 
+    }
+
+    .hero-right img {
+        max-height: 250px; 
+    }
+}
+
+@media screen and (max-width: 389px) {
+    .hero {
+        padding: 20px 5%; 
+        margin-bottom: 20px; 
+    }
+
+    .hero-left h2 {
+        font-size: 16px; 
+    }
+
+    .hero-left p {
+        font-size: 24px; 
+    }
+
+    .hero-hand-icon img {
+        width: 40px; 
+    }
+
+    .hero-latest-btn {
+        width: 160px; 
+        height: 40px; 
+        font-size: 12px; 
+        margin-top: 10px; 
+    }
+
+    .hero-right img {
+        max-height: 200px; /* Even smaller image size for very small screens */
+    }
+}

@@ -1,0 +1,109 @@
+.related-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.related-products h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.related-products hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    max-width: 800px;
+}
+
+.related-products-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    width: 70%; 
+    max-width: 1200px; 
+}
+
+.related-products-item .item {
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.related-products-item .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles for screens less than 1024px */
+@media (max-width: 1024px) {
+    .related-products-item { 
+        width: 80%;
+    }
+}
+
+/* Responsive Styles for screens less than 1000px */
+@media (max-width: 1000px) {
+    .related-products {
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .related-products h1 {
+        font-size: 1.6rem; 
+    }
+
+    .related-products-item {
+        grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
+        width: 90%; 
+        gap: 12px; 
+    }
+} 
+
+/* Responsive Styles for 768px and below */
+@media (max-width: 768px) {
+    .related-products {
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .related-products h1 {
+        font-size: 1.5rem;
+    }
+
+    .related-products-item {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        width: 80%; 
+        gap: 10px; 
+    }
+
+    .related-products-item .item {
+        margin-bottom: 10px; 
+    }
+}
+
+/* Responsive Styles for 480px and below */
+@media (max-width: 480px) {
+    .related-products-item {
+        grid-template-columns: 1fr; /* Change to 1 column */
+        width: 100%; 
+        width: calc(80% - 20px);
+    }
+
+    .related-products-item .item {
+        margin-bottom: 15px; 
+        width: 100%;
+    }
+}
