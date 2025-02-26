@@ -1,4 +1,5 @@
 [build]
+<<<<<<< HEAD
   publish = "build"
   command = "npm run build"
 
@@ -6,3 +7,8 @@
   command = "npm start"
   targetPort = 3000
   port = 3001
+=======
+  base = "frontend"
+  publish = "frontend/build"
+  command = "npm run build"
+>>>>>>> 2a4d2672409fcef0408aa79e1d3152a821c7a566

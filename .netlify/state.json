@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Abidjan",
+			"country": {
+				"code": "CI",
+				"name": "Ivory Coast"
+			},
+			"subdivision": {
+				"code": "AB",
+				"name": "Abidjan Autonomous District"
+			},
+			"timezone": "Africa/Abidjan",
+			"latitude": 5.3536,
+			"longitude": -4.0012
+		},
+		"timestamp": 1740566560755
+	}
+}
