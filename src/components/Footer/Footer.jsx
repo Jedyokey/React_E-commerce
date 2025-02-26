@@ -80,9 +80,9 @@ const Footer = () => {
             <div className="footer-section">
                 <h4>Follow Us</h4>
                 <div className="footer-social-icons">
-                    <a href="#"><img src={instagram_icon} alt="Instagram" /></a>
-                    <a href="#"><img src={tiktok_icon} alt="Tiktok" /></a>
-                    <a href="#"><img src={facebook_icon} alt="Facebook" /></a>
+                    <a href="/"><img src={instagram_icon} alt="Instagram" /></a>
+                    <a href="/"><img src={tiktok_icon} alt="Tiktok" /></a>
+                    <a href="/"><img src={facebook_icon} alt="Facebook" /></a>
                 </div>
             </div>
       </div>
