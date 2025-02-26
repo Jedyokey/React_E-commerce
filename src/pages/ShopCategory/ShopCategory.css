@@ -44,6 +44,7 @@
   border-radius: 5px;
   cursor: pointer;
   background: #fff;
+  outline: none;
 }
 
 .shopcategory-products {
