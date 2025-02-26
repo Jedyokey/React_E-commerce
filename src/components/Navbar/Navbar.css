@@ -56,12 +56,12 @@
 .nav-search input {
   width: 100%;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
   transition: border-color 0.3s;
-}
+} 
 
 .nav-search input:focus {
   border-color: #007bff;
