@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar/Navbar';

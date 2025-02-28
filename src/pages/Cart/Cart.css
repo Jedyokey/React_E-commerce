@@ -468,6 +468,10 @@
       font-size: 12px;
   }
 
+  .cart-summary {
+    min-height: 350px;
+  }
+
   .order-summary h2 {
       font-size: 1rem;
   }

@@ -1,5 +1,11 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -9,8 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "poppins";
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 code {
