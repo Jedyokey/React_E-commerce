@@ -42,17 +42,18 @@
 
 /* Input Field */
 .newsletter-form input {
-    flex: 1;
+    flex: 1; /* Allow input to take up available space */
     padding: 0 20px;
     border: none;
     outline: none;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
+    min-width: 0; /* Prevent input from overflowing */
 }
 
 /* Subscribe Button */
 .newsletter-form button {
-    width: 180px;
+    min-width: 120px; /* Minimum width to prevent shrinking */
     height: 100%;
     border: none;
     background: #ff4141;
@@ -92,12 +93,12 @@
     }
 
     .newsletter-form button {
-        width: 160px; 
+        min-width: 100px; /* Adjusted for smaller screens */
         font-size: 17px; 
     }
 }
 
-/* Responsive Design */
+/* Responsive Design for <768px */
 @media (max-width: 768px) {
     .newsletter {
         width: 90%;
@@ -122,11 +123,12 @@
     }
 
     .newsletter-form button {
-        width: 140px;
+        min-width: 90px; /* Adjusted for smaller screens */
         font-size: 16px;
     }
 }
 
+/* Responsive Design for <480px */
 @media (max-width: 480px) {
     .newsletter h1 {
         font-size: 28px;
@@ -141,12 +143,12 @@
     }
 
     .newsletter-form button {
-        width: 120px;
+        min-width: 80px; /* Adjusted for smaller screens */
         font-size: 14px;
     }
 }
 
-/* Optional: Responsive Design for <389px */
+/* Responsive Design for <389px */
 @media (max-width: 389px) {
     .newsletter {
         width: 95%; /* Wider for very small screens */
@@ -162,11 +164,24 @@
     }
 
     .newsletter-form {
-        height: 50px; 
+        height: auto; /* Allow height to adjust */
+        flex-direction: column; /* Stack input and button vertically */
+        border-radius: 15px; /* Adjust border radius for stacked layout */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .newsletter-form input {
+        width: 100%; /* Full width for input */
+        padding: 10px; /* Add padding for better spacing */
+        border-radius: 15px; /* Adjust border radius */
+        margin-bottom: 10px; /* Add spacing between input and button */
     }
 
     .newsletter-form button {
-        width: 100px; 
-        font-size: 13px; 
+        width: 100%; /* Full width for button */
+        min-width: unset; /* Remove min-width */
+        height: 50px; /* Set a fixed height */
+        border-radius: 15px; /* Adjust border radius */
+        font-size: 14px; /* Adjust font size */
     }
 }

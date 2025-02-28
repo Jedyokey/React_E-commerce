@@ -230,6 +230,7 @@
   border-radius: 4px;
   font-size: 14px;
   outline: none;
+  height: 40px;
 }
 
 .mobile-search-bar input[type="text"]::placeholder {
@@ -247,6 +248,7 @@
   display: flex;
   align-items: center;
   gap: 8px; 
+  height: 40px;
 }
 
 .mobile-search-bar button[type="submit"]:hover {
@@ -256,17 +258,6 @@
 .search-icon {
   font-size: 16px; 
 }
-
-/* Modal Overlay */
-/* .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-} */
 
 
 /* Media Queries for <1024px */
@@ -486,11 +477,18 @@
   }
 
   .mobile-search-bar input[type="text"] {
-    font-size: 16px; 
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px; 
+    height: 36px; 
   }
 
   .mobile-search-bar button[type="submit"] {
     padding: 8px 12px; 
-    font-size: 16px; 
+    font-size: 14px; 
+    height: 36px; /* Match the height of the input field */
+  }
+
+  .search-icon {
+    font-size: 14px; /* Adjust icon size for smaller screens */
   }
 }

@@ -237,7 +237,7 @@
   }
 
   .footer .newsletters-form input {
-    max-width: 93.5%; /* Full width for input on mobile */
+    max-width: 100%; /* Full width for input on mobile */
   }
 
   .footer .newsletters-form button {
