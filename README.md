@@ -1,6 +1,6 @@
 # Shopper - Your Ultimate Online Fashion Destination 🛍️
 
-![E-commerce Website](https://shopperonlinestore.netlify.app/)
+[E-commerce Website](https://shopperonlinestore.netlify.app/) 
 
 ## Description
 
